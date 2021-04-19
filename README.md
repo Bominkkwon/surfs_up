@@ -35,7 +35,7 @@ According to the anaylsis above, the weather does not change significantly from 
 session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
 ```
 ```python
-session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
 ```
 It is clear that Oahu, Hawaii in December is colder and rains more than in June and, therefore, one could expect a little slow month, or people may not spend their time outside and decide to spend more time in store getting ice cream or shopping. However, the data is showing that the differences (whether the temperature or the amount of rain) between June and December are not huge, which makes this business proposal more appealing. 
 
