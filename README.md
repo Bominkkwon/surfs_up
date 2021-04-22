@@ -32,10 +32,12 @@ Tourism in Hawaii is very important and its businesses really depends on it -- a
 According to the anaylsis above, the weather does not change significantly from June to Decemeber. These two additional queries are helpful to see how much rain they get in June and in Decemember:
 
 ```python
-session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+June_prcp = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+list(June_prcp)
 ```
 ```python
-session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
+Dec_prcp = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
+list(Dec_prcp)
 ```
 It is clear that Oahu, Hawaii in December is colder and rains more than in June and, therefore, one could expect a little slow month, or people may not spend their time outside and decide to spend more time in store getting ice cream or shopping. However, the data is showing that the differences (whether the temperature or the amount of rain) between June and December are not huge, which makes this business proposal more appealing. 
 
